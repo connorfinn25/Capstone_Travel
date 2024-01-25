@@ -5,3 +5,4 @@ git commit -m "first commit"
 git branch -M main
 git remote add origin https://github.com/connorfinn25/Capstone_Travel.git
 git push -u origin main
+echo "# Annabelle's README edit" >> README.md

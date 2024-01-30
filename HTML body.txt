@@ -1,0 +1,38 @@
+<body>
+    <header>
+        <h1>Oazis Booking</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#flights">Flights</a></li>
+            <li><a href="#hotels">Hotels</a></li>
+        </ul>
+    </nav>
+    <section id="flights">
+        <h2>Book a Flight</h2>
+        <form method="post" action="/book-flight">
+            <label for="flightFrom">From:</label>
+            <input type="text" id="flightFrom" name="from" placeholder="City or Airport">
+            <label for="flightTo">To:</label>
+            <input type="text" id="flightTo" name="to" placeholder="City or Airport">
+            <label for="departureDate">Departure Date:</label>
+            <input type="date" id="departureDate" name="departureDate">
+            <button type="submit">Search Flights</button>
+        </form>
+    </section>
+    <section id="hotels">
+        <h2>Book a Hotel</h2>
+        <form method="post" action="/book-hotel">
+            <label for="hotelDestination">Destination:</label>
+            <input type="text" id="hotelDestination" name="destination" placeholder="City or Area">
+            <label for="checkInDate">Check-In:</label>
+            <input type="date" id="checkInDate" name="checkInDate">
+            <label for="checkOutDate">Check-Out:</label>
+            <input type="date" id="checkOutDate" name="checkOutDate">
+            <button type="submit">Search Hotels</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2024 Oazis Booking</p>
+    </footer>
+</body>

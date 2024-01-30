@@ -1,4 +1,11 @@
 
+# Creating Ec2 instance from cloud9 cli
+
+aws cloud9 create-environment-ec2 --name capstone --description "Capstone Environment for Cloud9." --instance-type t2.micro --image-id resolve:ssm:/aws/service/cloud9/amis/amazonlinux-1-x86_64 --region us-east-1 --connection-type CONNECT_SSM --subnet-id subnet-0f57f2d88e6b35b0d
+
+
+# How to push files/code from cli
+
 git config --global user.name your_github_username
 git config --global user.email your_email
 

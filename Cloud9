@@ -1,0 +1,18 @@
+
+git config --global user.name your_github_username
+git config --global user.email your_email
+
+cd branch_folder name
+git push
+#this should return a command that looks similar to the following
+git push --set-upstream origin cjemm222023
+
+git push --set-upstream origin cjemm222023 #your git push info
+your_github_username
+paste your token you just generated #this goes in the password field
+
+
+git config --global credential.helper store
+git push --set-upstream origin cjemm222023 #your git push info
+your_github_username
+paste your token you just generated

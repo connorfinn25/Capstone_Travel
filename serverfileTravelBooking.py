@@ -1,4 +1,4 @@
-from flask import Flask, request, redirect, send_from_directory
+from flask import Flask, redirect, request, send_from_directory
 
 app = Flask(__name__, static_folder='public')
 

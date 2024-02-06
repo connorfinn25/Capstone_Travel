@@ -1,60 +1,64 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #E0FFFF; /* Light background to make content pop */
 }
-header {
-    background-color:  #ff4500;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
+
+/* Style adjustments for tabs */
+.tablink {
+  background-color:#008B8B; /* Bright blue background for tabs */
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 12px; /* Smaller padding for smaller tabs */
+  font-size: 14px; /* Smaller font size */
+  width: 20%; /* Adjust width to make tabs smaller */
 }
-nav ul {
-    list-style-type: none;
-    background-color: #333;
-    text-align: center;
-    margin: 0;
-    padding: 0;
+
+.tablink:hover {
+  background-color: #0056b3; /* Darker blue on hover for interactivity */
 }
-nav ul li {
-    display: inline;
+
+.tabcontent {
+  display: none;
+  padding: 20px;
+  border: 1px solid #ddd; /* Lighter border */
+  background-color: #ffffff; /* White background for content */
+  margin-top: 2px; /* Small space between tabs and content */
 }
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    padding: 15px 20px;
-    display: inline-block;
+
+/* Enhanced style for search section */
+.search-container {
+  text-align: center;
+  padding: 50px 0;
+  background-color:#4B0082 ; /* Matching the tab color */
+  color: white; /* White text for contrast */
 }
-section {
-    margin: 20px;
-    padding: 20px;
-    background-color: white;
+
+.search-container input[type=text] {
+  padding: 10px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: 1px solid #ddd; /* Slight border for the input */
+  width: 50%; /* Wider input box */
+  border-radius: 5px; /* Rounded corners for the input box */
 }
-form {
-    display: flex;
-    flex-direction: column;
+
+.search-container button {
+  padding: 10px 20px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  background-color: #0056b3; /* Dark blue for the button */
+  color: white;
+  border-radius: 5px; /* Rounded corners for the button */
 }
-form input[type="text"], form input[type="date"] {
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+
+.search-container button:hover {
+  background-color: #004080; /* Even darker blue on hover */
 }
-button {
-    background-color:  #ff4500;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-button:hover {
-    background-color: #0056b3;
-}
-footer {
-    text-align: center;
-    padding: 10px 0;
-    background-color: #333;
-    color: white;
-}
+This CSS enhances the attractiveness of the page by introducing a con

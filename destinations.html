@@ -78,13 +78,16 @@
             }
         }
 
-        // Populate the dropdown with countries
+        // Populate the dropdown with countries in alphabetical order
         async function populateCountriesDropdown() {
             const countriesSelect = document.getElementById('country-select');
             const countries = await fetchCountries();
 
             if (countries) {
-                countries.forEach(country => {
+                // Sort countries alphabetically by their common names
+                const sortedCountries = countries.sort((a, b) => a.name.common.localeCompare(b.name.common));
+
+                sortedCountries.forEach(country => {
                     const option = document.createElement('option');
                     option.value = country.alpha3Code;
                     option.textContent = country.name.common;

@@ -1,0 +1,38 @@
+from flask import Flask, redirect, request, send_from_directory, render_template
+import requests
+
+app = Flask(__name__, static_folder='public')
+
+# Replace 'YOUR_API_KEY' with your actual AviationStack API key
+AVIATIONSTACK_API_KEY = 'd0bc9a5148a6318b1395b8c01caacd3c'
+AVIATIONSTACK_API_BASE_URL = 'https://api.aviationstack.com/v1/flights'
+
+def find_flights(departure, arrival):
+    endpoint = 'flights'
+    params = {
+        'access_key': AVIATIONSTACK_API_KEY,
+        'departure_iata': departure,
+        'arrival_iata': arrival,
+    }
+    response = requests.get(AVIATIONSTACK_API_BASE_URL + endpoint, params=params)
+    return response.json()
+
+@app.route('/find-flights', methods=['GET'])
+def find_flights_page():
+    return render_template('find_flights.html')
+
+@app.route('/search-flights', methods=['POST'])
+def search_flights():
+    departure = request.form.get('departure')
+    arrival = request.form.get('arrival')
+
+    if not departure or not arrival:
+        return "Please provide both departure and arrival airports."
+
+    flight_data = find_flights(departure, arrival)
+
+    # Process and display flight data as needed
+    return render_template('flight_results.html', flights=flight_data)
+
+if __name__ == '__main__':
+    app.run(debug=True)

@@ -3,7 +3,6 @@ import requests
 
 app = Flask(__name__, static_folder='public')
 
-# Replace 'YOUR_API_KEY' with your actual AviationStack API key
 AVIATIONSTACK_API_KEY = 'd0bc9a5148a6318b1395b8c01caacd3c'
 AVIATIONSTACK_API_BASE_URL = 'https://api.aviationstack.com/v1/flights'
 

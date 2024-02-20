@@ -60,47 +60,20 @@
     <div id="search-container">
         <h2 class="text-center mb-4">Destination Search</h2>
         <div class="form-group">
-            <label for="country-select">Select a country:</label>
-            <select id="country-select" class="form-control"></select>
+            <label for="city-select">Select a city:</label>
+            <select id="city-select" class="form-control">
+                <option value="la">Los Angeles (LA)</option>
+                <option value="nyc">New York City (NYC)</option>
+                <option value="dc">Washington D.C. (DC)</option>
+            </select>
         </div>
         <button id="search-button" class="btn btn-primary btn-block" onclick="searchDestination()">Search</button>
     </div>
 
     <script>
-        // Fetch countries from the REST Countries API
-        async function fetchCountries() {
-            try {
-                const response = await fetch('https://restcountries.com/v3.1/all');
-                const data = await response.json();
-                return data;
-            } catch (error) {
-                console.error('Error fetching countries:', error);
-            }
-        }
-
-        // Populate the dropdown with countries in alphabetical order
-        async function populateCountriesDropdown() {
-            const countriesSelect = document.getElementById('country-select');
-            const countries = await fetchCountries();
-
-            if (countries) {
-                // Sort countries alphabetically by their common names
-                const sortedCountries = countries.sort((a, b) => a.name.common.localeCompare(b.name.common));
-
-                sortedCountries.forEach(country => {
-                    const option = document.createElement('option');
-                    option.value = country.alpha3Code;
-                    option.textContent = country.name.common;
-                    countriesSelect.appendChild(option);
-                });
-            }
-        }
-
-        populateCountriesDropdown(); // Call the function to populate the dropdown on page load
-
         function searchDestination() {
-            var selectedCountry = document.getElementById("country-select").value;
-            window.location.href = selectedCountry + ".html";
+            var selectedCity = document.getElementById("city-select").value;
+            window.location.href = selectedCity + ".html";
 
             // Add animation class to button when clicked
             document.getElementById("search-button").classList.add("shake-animation");

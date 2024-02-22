@@ -1,0 +1,23 @@
+<div class="flight-search-container">
+    <div class="header">
+        StarTravel Flights
+    </div>
+    <form id="flightSearchForm">
+        <div class="input-container">
+            <label for="from">From:</label>
+            <input type="text" id="from" name="from" placeholder="Departure City" required>
+        </div>
+        <div class="input-container">
+            <label for="to">To:</label>
+            <input type="text" id="to" name="to" placeholder="Arrival City" required>
+        </div>
+        <div class="input-container">
+            <label for="dates">Dates:</label>
+            <input type="text" id="dates" name="dates" placeholder="Select Dates" onfocus="(this.type='date')" onblur="(this.type='text')" required>
+        </div>
+        <div class="input-container">
+            <button type="submit">Search Flight</button>
+        </div>
+    </form>
+</div>
+

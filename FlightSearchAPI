@@ -1,5 +1,5 @@
-from flask import Flask, redirect, request, send_from_directory, render_template
-import requests
+pip install Flask
+pip install requests
 
 app = Flask(__name__, static_folder='public')
 

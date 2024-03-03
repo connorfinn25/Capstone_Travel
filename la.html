@@ -4,9 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Los Angeles (LA)</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f4f4f4;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            color: #007BFF;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        .top-destinations {
+            margin-top: 40px;
+        }
+
+        .top-destinations h2 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .top-destinations ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .top-destinations ul li {
+            margin-bottom: 5px;
+        }
+
+        .back-link {
+            display: block;
+            margin-top: 20px;
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <h1>Los Angeles (LA)</h1>
-    <p>This is the page for Los Angeles (LA).</p>
+    <div class="container">
+        <h1>Los Angeles (LA)</h1>
+        <p>Welcome to the beautiful city of Los Angeles (LA). This is a vibrant and diverse city known for its entertainment industry, beaches, and cultural landmarks.</p>
+        <p>Explore the Hollywood Walk of Fame, visit the iconic Griffith Observatory, or relax on the sandy shores of Santa Monica Beach. There's something for everyone in LA!</p>
+
+        <h2>Top Restaurants</h2>
+        <ul>
+            <li><a href="https://www.yelp.com/search?find_desc=Restaurants&find_loc=Los+Angeles%2C+CA" target="_blank">Yelp</a></li>
+            <li><a href="https://www.opentable.com/los-angeles-restaurants" target="_blank">OpenTable</a></li>
+            <!-- Add more restaurant links as needed -->
+        </ul>
+
+        <h2>Top Hotels</h2>
+        <ul>
+            <li><a href="https://www.booking.com/city/us/los-angeles.en-gb.html" target="_blank">Booking.com</a></li>
+            <li><a href="https://www.expedia.com/Los-Angeles-Hotels.d178280.Travel-Guide-Hotels" target="_blank">Expedia</a></li>
+            <!-- Add more hotel links as needed -->
+        </ul>
+
+        <a href="#" class="back-link">Back to Destination Search</a>
+    </div>
+
+    <script>
+        document.querySelector('.back-link').addEventListener('click', function(event) {
+            event.preventDefault();
+            window.history.back();
+        });
+    </script>
 </body>
 </html>

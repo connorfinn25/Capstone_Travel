@@ -1,0 +1,26 @@
+
+# Creating Ec2 instance from cloud9 cli
+#subnet field will be modifed to the one attached to the cloud9 enviornemnt at set up 
+
+aws cloud9 create-environment-ec2 --name capstone1 --description "Capstone Environment for Cloud9." --instance-type t2.micro --image-id resolve:ssm:/aws/service/cloud9/amis/amazonlinux-2023-x86_64 --region us-east-1 --connection-type CONNECT_SSM --subnet-id subnet-02379e5c4c281b6bc
+
+
+# How to push files/code from cli
+
+git config --global user.name your_github_username
+git config --global user.email your_email
+
+cd branch_folder name
+git push
+#this should return a command that looks similar to the following
+git push --set-upstream origin cjemm222023
+
+git push --set-upstream origin cjemm222023 #your git push info
+your_github_username
+paste your token you just generated #this goes in the password field
+
+
+git config --global credential.helper store
+git push --set-upstream origin cjemm222023 #your git push info
+your_github_username
+paste your token you just generated

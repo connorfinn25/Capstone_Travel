@@ -1,0 +1,39 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #ffdd00; /* Color changes when hovered over */
+    color: #007bff;
+    padding: 5px;
+    border-radius: 5px; /* Optional: Adds rounded corners */
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}

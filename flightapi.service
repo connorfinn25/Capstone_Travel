@@ -1,0 +1,11 @@
+[Unit]
+Description=Gunicorn instance for a flightapi app
+After=network.target
+[Service]
+User=ubuntu
+Group=www-data
+WorkingDirectory=/home/ubuntu/flightapi 
+ExecStart=/home/ubuntu/flightapi/venv/bin/gunicorn -b localhost:8000 flightapi:app
+Restart=always
+[Install]
+WantedBy=multi-user.target
